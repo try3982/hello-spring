@@ -1,8 +1,11 @@
 package com.bwj.hellospring.repository;
 
 import com.bwj.hellospring.domain.Member; // ✅ 올바른 import
+import org.springframework.stereotype.Repository;
+
 import java.util.*;
 
+@Repository
 public class MemoryMemberRepository implements MemberRepository {
     private static Map<Long, Member> store = new HashMap<>();
     private static long sequence = 0L;
